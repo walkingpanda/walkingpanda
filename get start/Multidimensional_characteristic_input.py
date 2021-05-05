@@ -70,6 +70,13 @@ for i in range(n):
     relu_optimizer.step()
 
 x = range(n)
-plt.plot(x,loss_sig)
-plt.plot(x,loss_relu)
+plt.xlabel("epoch")
+plt.ylabel("loss")
+
+
+
+plt.plot(x,loss_sig, color="blue", linewidth=2.5, linestyle="-", label="sigmoid")
+plt.plot(x,loss_relu, color="red",  linewidth=2.5, linestyle="-", label="relu")
+plt.legend(loc='upper left')
+
 plt.show()
